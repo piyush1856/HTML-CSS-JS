@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">I am para</p>
+    <div id="box">I am box</div>
+    <h1 id="head">I am heading</h1>
+</body>
+</html>
+
+<script>
+    // selectors -> id, class, tag, universal, combinators
+    // today only catch by Id selector
+
+    // syntax - getElementById("idName") -> camel case style for writing syntax
+
+
+    let x = document.getElementById("para")
+    console.log(x);
+    // no need to use # for ID
+
+    let y = document.getElementById("box").innerText
+    console.log(y);
+
+    let z = document.getElementById("head")
+    console.log(z.innerText);
+
+    // innertext will only give text of the tag anf it will work like object
+    // textContent will also work like innertext
+    // you can also use inner text inside console -- y.innertext
+
+</script>

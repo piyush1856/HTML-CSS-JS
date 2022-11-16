@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+</body>
+</html>
+<script>
+    let obj = {name:"satya",place:"banglore"};
+
+    // localStorage.setItem("details",obj)
+    localStorage.setItem("details",JSON.stringify(obj))
+
+    // it will not work .. check in application
+    // localStorage.setItem("details",obj)
+
+    // get the item -
+    let getobj = localStorage.getItem("details");
+    console.log(getobj)
+    // it is not object in console.. it is json 
+    // JSON.parse() == it will convert to object
+
+    
+    console.log(JSON.parse(getobj))
+    // let getobj = JSON.parse(localStorage.getItem("details"));
+    // it can also be done alternatively
+
+
+    // for setting an item to local server/storage- stringify it
+    // for getiing an item from local server/storage- parse it
+</script>

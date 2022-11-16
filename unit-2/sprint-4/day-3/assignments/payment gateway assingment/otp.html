@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+    <style>
+        *{
+          margin: 0px;
+          padding: 0px;
+          box-sizing: border-box;
+        }
+        body{
+          background-color: rgb(243, 243, 243);
+        }
+        div{
+          background-color: white;
+          width: 60%;
+          margin: auto;
+          padding: 10%;
+        }
+        input,button{
+          width: 100%;
+          font-size: 20px;
+          display: block;
+          margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form>
+          <input type="number" id="otp" placeholder="Enter OTP">
+          <input type="submit" value="Verify And Pay">
+        </form>
+      </div>
+</body>
+
+</html>
+
+<script>
+    let form = document.querySelector("form");
+    form.addEventListener("submit", function(event){
+      event.preventDefault();
+     
+      if(document.querySelector("#otp").value == 1234){
+        
+        alert("Payment Successful");
+        
+      }else{
+        alert("Worng Credentials")
+      }
+    }) 
+</script>

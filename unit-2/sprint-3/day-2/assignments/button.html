@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .con {
+        display: grid;
+        grid-template-columns: repeat(10,auto);
+        grid-template-rows: 40px;
+        gap: 10px;
+        margin: auto;
+        justify-content: center;
+        width: 80%;
+        height: 80px;
+        margin-top: 100px;
+    }
+    .con > button{
+        border: 1px transparent;
+        font-size: 25px;
+        border-radius: 10px;
+        padding: 10px 15px 10px 15px;
+        margin: auto;
+        color: white;
+    }
+</style>
+<body>
+   <div class="con">
+    <button style="background-color: blue;">Primary</button>
+    <button style="background-color: grey;">Secondary</button>
+    <button style="background-color: green;">Sucess</button>
+    <button style="background-color: red;">Danger</button>
+    <button style="background-color: yellow; color: black;">Warning</button>
+    <button style="background-color: teal;">Info</button>
+    <button style="background-color: snow;color: black;">Light</button>
+    <button style="background-color: black;">Dark</button>
+    <button style="background-color: snow;color: blue;">Link</button>
+   </div>
+</body>
+</html>

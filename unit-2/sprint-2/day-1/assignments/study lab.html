@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #bar{
+        width: 90%;
+        height: 1.5cm;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+
+    }
+    #bar>div:first-child{
+        width: 10%;
+        height: 100%;
+        margin-left: 15px;
+        
+    }
+    #bar img{
+        width: 100%;
+        height: 80%;
+    }
+    #bar> div:last-child{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+        font-size: 20px;
+        margin-right: 10px;
+        color: rgb(103, 94, 94);
+        
+    }
+    #bar> div:last-child>div:first-child{
+        color: rgb(103, 103, 172);
+    }
+
+    .big{
+        width: 90%;
+        height: 16cm;
+        display: flex;
+        margin: auto;
+        margin-top: 30px;
+        justify-content: space-between;
+    }
+    .half1{
+        width: 49%;
+        height: 100%;
+        margin-top: 25px;
+    }
+    .half1>p:first-child{
+        color: rgb(106, 108, 216);
+        font-weight: bold;
+    }
+    .half1>p:first-child+div{
+        width: 95%;
+        height: 2cm;
+        font-weight: bold;
+        font-size: 40px;
+        margin-top: -15px;
+    }
+    .half1>p:first-child+div+div{
+        width: 85%;
+        margin-top: 45px;
+        font-size: 18px;
+        color: grey;
+        line-height: 25px;
+    }
+    .half1>p:first-child+div+div+div{
+        width: 85%;
+        margin-top: 45px;
+        font-size: 18px;
+        color: grey;
+        line-height: 25px;
+    }
+    .half1>p:first-child+div+div+div+div{
+        display: flex;
+    }
+    .half1 img{
+        width: 5cm;
+        height: 3cm;
+        
+    }
+    .half1>p:first-child+div+div+div+div>div>p{
+        font-size: 25px;
+        width: 80%;
+        margin-left: 25px;
+    }
+    .half2{
+        width: 45%;
+        height: 100%;
+        
+    }
+    .half2 > div{
+        width: 100%;
+        height: 50%;
+        justify-content: space-around;
+        display: flex;
+        margin-bottom: 25px;
+    }
+    .half2 > div > div{
+        width: 43%;
+        height: 100%;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+        
+        
+    }
+    .half2 img{
+        width: 1.5cm;
+        height: 1.5cm;
+        margin-top: 30px;
+        margin-left: 25px;
+    }
+    .l1{
+        font-weight: bold;
+        font-size: 25px;
+        margin-left: 25px;
+        color: rgb(75, 68, 68);
+        margin-top: -0.25%;
+
+       
+    }
+    .l2{
+        padding: 25px;
+        font-size: 20px;
+        color: grey;
+        margin-top: -25px;
+        line-height: 30px;
+    }
+    #l2{
+        margin-top: -25px;
+    }
+
+
+    
+    
+    
+</style>
+<body>
+    <div id="bar">
+        <div><img src="https://simplybook.it/uploads/studylabmoscow/image_files/preview/99bb71504775b5a80be8316e257fcc60.png" alt=""></div>
+        <div>
+            <div><p>Home</p></div>
+            <div><p>About</p></div>
+            <div><p>Course</p></div>
+            <div><p>Instructor</p></div>
+            <div>Blog</div>
+            <div>Contact</div>
+        </div>
+    </div>
+
+   <div class="big">
+       <div class="half1">
+           <p>WELCOME TO STUDYLAB</p>
+           <div><p>We Are StudyLab An Online learning Center</p></div>
+           <div><p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p></div>
+           <div><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p></div>
+           <div>
+               <div><img src="https://www.fnu.edu/wp-content/uploads/2014/09/Study_in_group_in_the_HHS_library-300x199.jpg" alt=""></div>
+               <div><p>Learn anything from StudyLab, Watch video</p></div>
+           </div>
+           
+           
+       </div>
+       <div class="half2">
+           <div>
+            <div>
+                <img src="https://hunterlab.com/media/original_images/configurable-data.png" alt="">
+                <p class="l1">Top Quality Content</p>
+                <p class="l2">A small river named Duden flows by their place and supplies</p>
+            </div>
+            <div>
+                <img src="https://hunterlab.com/media/original_images/configurable-data.png" alt="">
+                <p class="l1">Highly Skilled Instructor</p>
+                <p class="l2" id="l2">A small river named Duden flows by their place and supplies</p>
+            </div>
+           </div>
+           <div>
+            <div>
+                <img src="https://hunterlab.com/media/original_images/configurable-data.png" alt="">
+                <p class="l1">World Class & Quiz</p>
+                <p class="l2">A small river named Duden flows by their place and supplies</p>
+            </div>
+            <div>
+                <img src="https://hunterlab.com/media/original_images/configurable-data.png" alt="">
+                <p class="l1">Get Certified</p>
+                <p class="l2">A small river named Duden flows by their place and supplies</p>
+            </div>
+           </div>
+       </div>
+   </div>
+</body>
+</html>

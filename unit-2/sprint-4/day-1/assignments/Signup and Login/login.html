@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <style>
+
+        #main {
+            width: 470px;
+            height: 500px;
+            border: 1px solid transparent;
+
+            margin: auto;
+            margin-top: 70px;
+            border-radius: 10px;
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+
+
+        #main>p:first-child {
+            font-size: 35px;
+            font-weight: bold;
+            font-family: 'Pacifico', cursive;
+            font-family: 'Roboto', sans-serif;
+            cursor: default;
+        }
+
+        input {
+            width: 80%;
+            margin-top: 25px;
+            
+            background-color: #f1f1f1;
+            text-rendering: auto;
+            padding: 5px;
+            border-bottom: 2px solid #626265;
+
+            outline: none;
+
+
+        }
+
+        button {
+            width: 80%;
+            padding: 12px;
+            /* background-color: #6c64be; */
+            background-image: linear-gradient(to right, #8700fd, #5500ff);
+            color: white;
+            font-weight: bold;
+
+            border: 1px solid transparent;
+            margin-bottom: 60px;
+            cursor: pointer;
+
+
+        }
+
+        #a {
+            color: #6c64be;
+            text-decoration: none;
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <p>Login</p>
+        <input type="email" placeholder="Email" id="email">
+        <br>
+
+        <input type="password" placeholder="Password" id="pass">
+        <br>
+        <br>
+        <button id="logIn">Login</button>
+        <br>
+        <p>Forget Password?</p>
+
+        <p>Dont't have an account? <a id="a" href="./signup.html">Sign up</a></p>
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    let detailFromSignUp =JSON.parse(localStorage.getItem("signUpDetail"));
+    
+    // console.log(detailFromSignUp[0].password)
+    document.querySelector("#logIn").addEventListener("click",loginFunc);
+    
+
+
+    function loginFunc(){
+        let email = document.querySelector("#email").value;
+        let password = document.querySelector("#pass").value;
+        
+        
+        let result = true;
+        detailFromSignUp.forEach(function (elem){
+            if(email.length === 0 || password.length === 0){
+                result = false;
+            }
+            else if(email == elem.email && password == elem.password){
+                result = true;
+            }else if(email != elem.email || password != elem.password){
+                result = false;
+            }
+        })
+        
+        if(result == true){
+            alert("Login Successful");
+        }else if(result == false){
+            alert("Wrong Credentials");
+        }
+        
+    }
+
+
+</script>

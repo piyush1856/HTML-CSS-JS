@@ -1,0 +1,39 @@
+<!-- child selector1 > child selector2 > child selector3 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <style>
+        #contain  > #box  >p{
+            /* all p's those are childs of contain  */
+            background-color: teal;
+            font-size: 40px;
+        }
+        #sample{
+            color: red;
+        }
+        #box p{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="contain">
+        <p>p1</p>
+        <p>p2</p>
+        <p>p3</p>
+        <p>p4</p>
+        <div id="box">
+            <p>p5</p>
+            <p>p6</p>
+            <p>p7</p>
+        </div>
+    </div>
+    <div id="sample">
+        <p>p8</p>
+        <h1>heading</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .hot{
+    height: 558px;
+    width: 97.5%;
+    border: 1px solid white;
+    margin: auto;
+    background-color: white;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.hot > div:first-child{
+    width: 100%;
+    height: 38px;
+    margin-top: 60px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 38px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 38px;
+    color: #2e2c38;
+    padding-left: 15px;
+}
+.makeup{
+    width: 100%;
+    height: 436px;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 100% ;
+    gap: 4px;
+    position: relative;
+    margin-bottom: 7px;
+}
+.makeup>div{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    padding-left: 8px;
+    padding-right: 8px;
+    min-width: 35%;
+}
+.makeup > div > img:first-child{
+    width: 100%;
+    height: 280px;
+    cursor: pointer;
+}
+#star{
+    width: 84px;
+    height: 16px;
+    margin-top: 5px;
+    cursor: pointer;
+    margin-right: 3px;
+}
+#productName{
+    font-size: 14px;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #2e2c38;
+    margin: 5px 0px;
+    padding: 0px 14px 0px 0px;
+    line-height: 16px;
+    cursor: pointer;
+}
+#productPrice{
+    font-size: 14px;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #202340;
+    line-height: 24px;
+    cursor: pointer;
+}
+#cashback{
+    font-size: 12px;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #202340;
+    line-height: 16px;
+    cursor: pointer;
+}
+#shipping{
+    font-size: 12px;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #007E97;
+    line-height: 14px;
+    margin-top: 4px;
+    text-decoration: none;
+    cursor: pointer;
+}
+#productName:hover{
+    color: #00a8ca;
+}
+#shipping:hover{
+    color: #00a8ca;
+}
+#bracket{
+    font-size: 12px;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #2e2c38;
+    position: absolute;
+    cursor: pointer;
+    margin-top: 7px;
+}
+#bracket:hover{
+    color: #00a8ca;
+}
+.btn{
+    position: absolute;
+    background-color: rgba(77, 77, 77, 1);
+    background-color: transparent;
+    border-radius: 100%;
+    font-weight: 400;
+    line-height: 55px;
+    font-size: 55px;
+    color: #202340;
+    width: 60px;
+    height: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 200px;
+    border: transparent;
+}
+#btn1{
+    left: 0.3%;
+}
+#btn2{
+    right: 0.3%;
+}
+.btn:hover{
+    background-color: rgba(77, 77, 77, 0.2);
+    background-color: rgb(199, 199, 199);
+    cursor: pointer;
+    border: 2px solid white;
+}
+#box2img{
+    width: 13px;
+    height: 13px;
+    margin-right: -3px;
+    margin-top: -4px;
+    margin-bottom: -1.5px;
+    margin-left: 3px;
+    box-shadow: none;
+}
+</style>
+<body>
+    <div class="hot">
+        <div>Hot New Products</div>
+
+        <div class="makeup">
+            <div>
+                <img src="https://img.shop.com/Image/240000/248600/248698/products/1935915380.jpg?size=300x300" alt="">
+                <p id="productName">Lumière de Vie® Soothe & Renew Hydrogel Masque</p>
+                <p id="productPrice">$65.00</p>
+                <span id="cashback">+ $1.30 / 2% <img id="box2img" src="https://img.shop.com/Image/resources/images/cashback-icon.svg" alt=""> Cashback</span>
+                <br>
+                <a id="shipping" href="">Free shipping with $99 orders</a>
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/240000/243300/243380/products/1932836050.jpg?size=300x300" alt="">
+                <p id="productName">Motives® Sculpting Concealer</p>
+                <p id="productPrice">$22.00</p>
+                <span id="cashback">+ $0.44 / 2% <img id="box2img" src="https://img.shop.com/Image/resources/images/cashback-icon.svg" alt=""> Cashback </span>
+                <br>
+                <img id="star" src="https://img.shop.com/Image/resources/images/star_rating.svg" alt=""><span id="bracket">(7)</span>
+                <br>
+                <a id="shipping" href=""> Free shipping with $99 orders</a>
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/240000/243300/243380/products/1925345765.jpg?size=300x300" alt="">
+                <p id="productName">Motives® 3-in-1 Cream Tints</p>
+                <p id="productPrice">$39.95</p>
+                <span id="cashback">+ $0.80 / 2% <img id="box2img" src="https://img.shop.com/Image/resources/images/cashback-icon.svg" alt=""> Cashback </span>
+                <br>
+                <img id="star" src="https://img.shop.com/Image/resources/images/star_rating.svg" alt=""><span id="bracket">(2)</span>
+                <br>
+                <a id="shipping" href=""> Free shipping with $99 orders</a>
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/240000/243300/243380/products/1925345789.jpg?size=300x300" alt="">
+                <p id="productName">Motives® Moments Pressed Pigment Palette</p>
+                <p id="productPrice">$35.00</p>
+                <span id="cashback">+ $0.70 / 2% <img id="box2img" src="https://img.shop.com/Image/resources/images/cashback-icon.svg" alt=""> Cashback</span>
+                <br>
+                <img id="star" src="https://img.shop.com/Image/resources/images/star_rating.svg" alt=""><span id="bracket">(2)</span>
+                <br>
+                <a id="shipping" href=""> Free shipping with $99 orders</a>
+            </div>
+            <div>
+                <img src="https://img.shop.com/Image/240000/247900/247927/products/1925345712.jpg?size=300x300" alt="">
+                <p id="productName">Shopping Annuity® Brand Premium Flushable Wipes - 150 Count</p>
+                <p id="productPrice">$7.49</p>
+                <span id="cashback">+ $0.15 / 2% <img id="box2img" src="https://img.shop.com/Image/resources/images/cashback-icon.svg" alt=""> Cashback</span>
+                <br>
+                <a id="shipping" href=""> Free shipping with $99 orders</a>
+            </div>
+            
+            <button id="btn1" class="btn">❮</button>
+            <button id="btn2" class="btn">❯</button>
+        </div>
+    </div>
+</body>
+</html>

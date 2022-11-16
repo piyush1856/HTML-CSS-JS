@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+
+    <style>
+      *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body{
+        background-color: rgb(243, 243, 243);
+      }
+      div{
+        background-color: white;
+        width: 60%;
+        margin: auto;
+        padding: 10%;
+      }
+      input,button{
+        width: 100%;
+        font-size: 20px;
+        display: block;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <form>
+        <input type="number" id="cardNo" placeholder="Enter Card Number">
+        <input type="number" id="cvv" placeholder="Enter CVV">
+        <input type="date" id="date" placeholder="Enter Expiry Date">
+        <input type="text" id="name" placeholder="Enter Name">
+        <button id="Validate">Validate OTP</button>
+      </form>
+    </div>
+  </body>
+</html>
+<script>
+    let form = document.querySelector("form");
+    let data = {
+        card : document.querySelector("#cardNo").value,
+        cvv : document.querySelector("#cvv").value,
+        date : document.querySelector("#date").value,
+        name : document.querySelector("#name").value
+      }
+    form.addEventListener("submit", function(event){
+      event.preventDefault();
+      window.location.href = "otp.html"
+      
+    })
+</script>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body>div{
+            display: flex;
+            
+            margin: auto;
+            justify-content: center;
+        }
+        body>div:first-child{
+            margin-top: 4cm;
+            
+        }
+        input{
+            height: 0.7cm;
+            width: 5cm;
+            margin: 10px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            border: 1px solid transparent;
+            border-radius: 10px;
+        }
+        input:hover{
+            border: 3px solid rgb(248, 203, 136);
+        }
+        button{
+            margin: 0.5cm;
+            width: 2cm;
+            height: 0.7cm;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        button:hover{
+            background-color: rgb(245, 245, 192);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="number" placeholder="enter 1st Number" id="N1">
+        <input type="number" placeholder="enter 2nd Number" id="N2">
+    </div>
+    <div>    
+        <button onclick="add()">Add</button>
+        <button onclick="Substract()">Subtract</button>
+        <button onclick="Multiply()">Multiply</button>
+        <button onclick="Divide()">Divide</button>
+    </div>
+</body>
+</html>
+
+<script>
+    function add(){
+        let num1 = document.getElementById("N1").value;
+        let num2 = document.getElementById("N2").value;
+        let answer= +(num1) + +(num2)
+        alert(answer)
+    }
+
+    function Substract(){
+        let num1 = document.getElementById("N1").value;
+        let num2 = document.getElementById("N2").value;
+        let answer= +(num1) - +(num2)
+        alert(answer)
+    }
+
+    function Multiply(){
+        let num1 = document.getElementById("N1").value;
+        let num2 = document.getElementById("N2").value;
+        let answer= +(num1) * +(num2)
+        alert(answer)
+    }
+
+    function Divide(){
+        let num1 = document.getElementById("N1").value;
+        let num2 = document.getElementById("N2").value;
+        let answer= +(num1) / +(num2)
+        alert(answer)
+    }
+</script>

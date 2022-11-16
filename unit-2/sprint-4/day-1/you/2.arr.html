@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let num = [1,2,3,4,5];
+    // num = JSON.stringify(num);
+    
+    localStorage.setItem("arrOfNum",JSON.stringify(num))
+    
+    // localStorage.setItem("arrOfNum",num)
+    // storing in string format if JSON.stringify not used
+    
+    let getArr = localStorage.getItem("arrOfNum")
+    console.log(typeof getArr);
+
+    // JSON - javascript object notation - it is universal data language
+    // JSON.stringify() - converts string to array
+    // backhand sends data in form of JSON
+
+    let name = ["Abhay","Bobby","Chintu"]
+    localStorage.setItem("arrOfNames",JSON.stringify(name));
+
+    // json vs objects:
+    // json - {"name" : "Piyush", "roll" : "1856"}
+    // object - {name : Piyush, roll : 1856}
+
+    // in json both key and value is in form of string 
+    // JSON.stringify() - stores in form of an array
+</script>

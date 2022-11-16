@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* decendent seletor :- selector1 selector2 selecteor3 ... */
+        /* it will select all p's decendent of div  */
+        /* div p{
+            
+            background-color: aqua;
+        } */
+        #con p{
+            /* it will select all p's decendent of div  */
+            background-color: aqua;
+        }
+        span p{
+            /* it will select all p's decendent of div  */
+            background-color: rgb(116, 138, 138);
+        }
+    </style>
+</head>
+<body>
+    <div id="con">
+        <p>paragraph 1</p>
+        <p>paragraph 2</p>
+        <p>paragraph 3</p>
+        <span>
+            <p>para inside span, inside div</p>
+        </span>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div><p>i am para 8</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span>
+        <p>para 10
+        </p>
+    </span>
+
+    <p>para 4, is not decendent of div</p>
+    <p>para 5, is not decendent of div</p>
+    <p>para 6, is not decendent of div</p>
+    <p>para 7, is not decendent of div</p>
+
+
+</body>
+</html>
+
+
+
+<!-- 4 combinators are  
+1. decendents :-   space
+2.child   :-     >
+3.general sibling    :-  ~
+4.adjacent sibling   :-  +
+ -->

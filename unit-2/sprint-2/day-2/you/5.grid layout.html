@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        background-color: bisque;
+        padding: 20px;
+        display: grid;
+        
+        grid-template-columns: repeat(3,100px);
+        grid-template-rows: 100px 100px;   
+       
+        gap: 20px;
+        
+
+
+    }
+    #container>div{
+        /* all flex property of yesterday class will work for grid also */
+        font-size: 40px;
+        border: 4px solid black;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    #container>div:nth-child(1){
+        background-color: blue;
+    }
+    #container>div:nth-child(2){
+        background-color: green;
+        /* grid-area - changing box position*/
+        /*  notation order :
+          row-start 
+          col-start 
+          row-end 
+          col-end   */
+
+        /*  notation : 1/2/3/4 */
+        /* one the position of specific box will change */
+
+       
+        /* grid-area: 1/1/2/2; */
+        /* green box will move to first place */
+       
+        grid-area: 2/3/3/4;
+        /* old-1/2/2/3 */
+        /* green box to end */
+
+    }
+    #container>div:nth-child(3){
+        background-color: yellow;
+    }
+    #container>div:nth-child(4){
+        background-color: red;
+    }
+    #container>div:nth-child(5){
+        background-color: brown;
+    
+    }
+    #container>div:nth-child(6){
+        background-color: pink;
+        /* old-2/2/3/3 */
+        /* new-1/1/2/2 */
+        grid-area: 1/1/2/2;
+        /* move to first position */
+    }
+</style>
+<body>
+    <div id="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    
+</body>
+</html>
+
+

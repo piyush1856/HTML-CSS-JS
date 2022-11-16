@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(auto,auto);
+        gap: 20px;
+    }
+    img{
+        width: 200px;
+        height: 200px;
+    }
+</style>
+<body>
+    <h3 >Items in Cart : <h3 id="item"></h3></h3>
+    <h1>Toatal Price : <h1 id="total"></h1></h1>
+    <input type="text" placeholder="Apply Promo Code" id="code">
+    <button id="promo">Apply</button>
+    <div id="container">
+        
+    </div>
+    
+    
+    
+    
+</body>
+</html>
+
+<script>
+    let cartLS = JSON.parse(localStorage.getItem("cart-page")) || [];
+    let Total_Price = 0;
+    let count =0;
+    
+    cartLS.forEach(function (elem){
+    count++;
+    document.querySelector("#item").innerText = count;
+    Total_Price += +elem.price
+    document.querySelector("#total").innerText = eval(Total_Price)
+
+    let box = document.createElement("div");
+    
+    let avatar = document.createElement("img");
+    avatar.setAttribute("src", elem.image_url);
+
+    let product = document.createElement("h3");
+    product.innerText = elem.name; 
+
+    let price = document.createElement("p");
+    price.innerText = elem.price;
+
+    let offPrice = document.createElement("p");
+    offPrice.innerText = elem.strikedoffprice;
+
+    let button = document.createElement("button");
+    button.innerText = "Delete";
+    button.addEventListener("click", function(){
+      Delete(elem.name);
+    })
+
+    box.append(avatar, product, price, offPrice, button);
+
+    document.querySelector("#container").append(box);
+   })
+
+   function Delete(id){
+    let deleted = cartLS.filter(function(el){
+        return el.name != id;
+    })
+
+    cartLS = deleted;
+    localStorage.setItem("cart-page", JSON.stringify(cartLS));
+    
+    window.location.reload();
+   }
+   
+   
+   document.querySelector("#promo").addEventListener("click",promoFunc)
+   function promoFunc(){
+    let x = document.querySelector("#code").value;
+
+    if(x== "masai30"){
+        document.querySelector("#total").innerText = Total_Price-(0.3*Total_Price)
+    }
+   }
+
+</script>

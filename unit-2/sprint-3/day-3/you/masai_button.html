@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    // let names = [
+    //     "Primary",
+    //     "Secondary", 
+    //     "Success", 
+    //     "Danger", 
+    //     "Warning",
+    //     "Info", 
+    //     "Light", 
+    //     "Dark", 
+    //     "Link"
+    // ];
+    // let color = [
+    //     "blue", 
+    //     "grey",
+    //     "green", 
+    //     "red",
+    //     "yellow",
+    //     "cyan",
+    //     "white",
+    //     "black",
+    //     "white"
+    // ];
+
+
+    let btnArr = [
+        {name:"Primary", bgcolor:"blue", color:"white"},
+        {name:"Secondary", bgcolor:"grey", color:"white"},
+        {name:"Danger", bgcolor:"red", color:"white"},
+        {name:"Warning", bgcolor:"yellow", color:"black"},
+        {name:"Info", bgcolor:"cyan", color:"white"},
+        {name:"Light", bgcolor:"white", color:"black"},
+        {name:"Success", bgcolor:"green", color:"white"},
+        {name:"Dark", bgcolor:"black", color:"white"},
+        {name:"Link", bgcolor:"white", color:"blue"},
+    ];
+ 
+    // for(let i=0;i< btnArr.length;i++){
+    //     let btn = document.createElement("button");
+    //     btn.innerText = btnArr[i].name;
+    //     btn.style.backgroundColor = btnArr[i].bgcolor;
+    //     btn.style.color = btnArr[i].color;
+    //     document.querySelector("body").append(btn);
+    // }
+
+    
+    // hof - forEach and map can also be used instead of for loop
+    
+        btnArr.forEach(function (elem , index , arr){
+            let btn = document.createElement("button");
+            btn.innerText = elem.name;
+            btn.style.backgroundColor = elem.bgcolor;
+            btn.style.color = elem.color;
+            document.querySelector("body").append(btn);
+        })
+
+</script>

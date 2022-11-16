@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(2,auto);
+            gap: 20px;
+        }
+        h2+img{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+</body>
+</html>
+
+<script>
+
+    let mentors =[
+       { image : "https://masai-website-images.s3.ap-south-1.amazonaws.com/amol_holani_104aa76aad.jpeg",
+          name: "Amol Holani",
+          logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/citi_rect_0895008b53.svg"
+        },
+        { image : "https://masai-website-images.s3.ap-south-1.amazonaws.com/amol_holani_104aa76aad.jpeg",
+          name: "Amol Holani",
+          logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/citi_rect_0895008b53.svg"
+        },
+        { image : "https://masai-website-images.s3.ap-south-1.amazonaws.com/amol_holani_104aa76aad.jpeg",
+          name: "Amol Holani",
+          logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/citi_rect_0895008b53.svg"
+        },
+        { image : "https://masai-website-images.s3.ap-south-1.amazonaws.com/amol_holani_104aa76aad.jpeg",
+          name: "Amol Holani",
+          logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/citi_rect_0895008b53.svg"
+        },
+        { image : "https://masai-website-images.s3.ap-south-1.amazonaws.com/amol_holani_104aa76aad.jpeg",
+          name: "Amol Holani",
+          logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/citi_rect_0895008b53.svg"
+        },
+        { image : "https://masai-website-images.s3.ap-south-1.amazonaws.com/amol_holani_104aa76aad.jpeg",
+          name: "Amol Holani",
+          logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/citi_rect_0895008b53.svg"
+        },
+        { image : "https://masai-website-images.s3.ap-south-1.amazonaws.com/amol_holani_104aa76aad.jpeg",
+          name: "Amol Holani",
+          logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/citi_rect_0895008b53.svg"
+        },
+        { image : "https://masai-website-images.s3.ap-south-1.amazonaws.com/amol_holani_104aa76aad.jpeg",
+          name: "Amol Holani",
+          logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/citi_rect_0895008b53.svg"
+        },
+    ]
+
+    mentors.forEach(function(elem){
+        // creat child box
+        let box = document.createElement("div");
+        
+        // create img element
+        let avatar = document.createElement("img");
+        avatar.setAttribute("src", elem.image);
+
+        // create h2
+        let mentorName = document.createElement("h2");
+        mentorName.innerText = elem.name;
+
+        // creat logo
+        let logoMentor = document.createElement("img");
+        logoMentor.setAttribute("src", elem.logo);
+
+        // append created variable
+        box.append(avatar, mentorName, logoMentor);
+
+        document.querySelector("#container").append(box);
+    
+        // append everything at last(recommended), might get error
+    })
+</script>

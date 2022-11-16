@@ -1,0 +1,19 @@
+:root{
+    /* CSS variable always must start with --  */
+    /* root is a pseudo class which help in declaring variable in CSS */
+
+    --background-color : red;
+
+}
+.box1{
+    --background-color:yellow;
+}
+.box{
+    width: 100%;
+    height: 80px;
+    margin-top: 20px;
+    background-color: var(--background-color);
+}
+.box2{
+    --background-color:blue;
+}

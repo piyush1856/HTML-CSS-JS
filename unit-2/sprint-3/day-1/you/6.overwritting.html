@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head">Masai School</h1>
+    <h2 id="head2">Changing innerText</h2>
+    <button onclick="likeme()">like</button>
+    <button onclick="dislikeme()">dislike</button>
+    <button onclick="defaultText()">Reset</button>
+    <button id="btn" onclick="complete()">Mark as complete</button>
+</body>
+</html>
+
+<script>
+    let x = document.getElementById("head").innerText = "Changing Lives"
+    // console.log(x)
+
+    function likeme(){
+        document.getElementById("head2").innerText = "Someone liked me"
+    }
+
+    function dislikeme(){
+        document.getElementById("head2").innerText = "Someone disliked me"
+    }
+
+    function defaultText(){
+        document.getElementById("head2").innerText= "Reset to default"
+    }
+    function complete(){
+        document.getElementById("btn").innerText= "Not Completed"
+    }
+
+
+</script>

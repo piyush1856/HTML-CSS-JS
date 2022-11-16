@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+</html>
+
+<script>
+    // let tr = document.createElement("tr");
+    // let td1 = document.createElement("td");
+    // td1.innerText = "Masai";
+    // let td2 = document.createElement("td");
+    // td2.innerText = "School";
+
+    // tr.append(td1,td2);
+    // document.querySelector("tbody").append(tr);
+
+
+    // Alternatively ->
+
+    document.querySelector("tbody").innerHTML = 
+    "<tr><td>Masai</td><td>School</td></tr>";
+
+    
+    // object literals
+    let name = "Piyush";
+    let city = "godda";
+    let job = "FSD";
+
+    // output - Piyush is from Godda and he is an FSD
+    // method 1 - sting concatination -> but, headache.
+
+    // object literals method
+
+    console.log(`${name} is from ${city} and he is an ${job}`);
+
+
+
+
+</script>

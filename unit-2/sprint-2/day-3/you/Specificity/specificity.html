@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-size: 20px;
+    }
+        /* Specificity score - 1 */
+    div{
+        font-size: 50px;
+    }
+      /* Specificity score - 1+1=2 */
+    body > div{
+        font-size: 100px;
+        color: aqua;
+    }
+    /* Specificity score - 10 */
+    .masai{
+        color: red;
+    }
+    /* Specificity score - 1+10=11 */
+    body>.masai{
+        color: brown;
+    }
+    /* Specificity score - 1+100=101 */
+    body> #school{
+        color: yellow;
+    }
+</style>
+<body>
+    <div class="masai" id="school">I am heading</div>
+</body>
+</html>
+
+
+<!-- S - 1000
+I - 100
+C - 10
+T - 1
+U - 0 -->

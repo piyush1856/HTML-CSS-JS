@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* without flex  */
+        .box{
+           border: 5px solid black;
+           display: flex;
+           flex-direction: row;
+        
+
+        }
+        /* which box has higest order value will come to  */
+        .box>div{
+            padding: 30px;
+        }
+        .box>div:first-child{
+            background-color: red;
+            order: 1;
+        }
+        .box>div:nth-child(2){
+            background-color: rgb(208, 231, 32);
+            order: 10;
+        }
+        .box>div:nth-child(3){
+            background-color: rgb(246, 22, 168);
+        }
+        .box>div:nth-child(4){
+            background-color: rgb(15, 67, 223);
+            order: 15;
+        }
+        .box>div:nth-child(5){
+            background-color: rgb(21, 234, 57);
+        }
+        .box>div:nth-child(6){
+            background-color: gray;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>

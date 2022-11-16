@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="name" type="text" placeholder="Enter Name" value="">
+    <input id="mbl" type="number" placeholder="Enter ph. No.">
+    <select id="gender">
+        <option >select gender</option>
+        <option value="M">male</option>
+        <option value="F">female</option>
+    </select>
+    <button onclick="SignUp()">Sign Up</button>
+    <h1 id="nameDisplay">Dispaly Name here</h1>
+    <h2 id="mblDisplay">display mobile no. here</h2>
+    <h3 id="genDis">Display Gender here</h3>
+</body>
+</html>
+
+<script>
+    function SignUp(){
+        let name = document.getElementById("name").value;
+        let mobile = document.getElementById("mbl").value;
+        let gender= document.getElementById("gender").value;
+        
+        document.getElementById("nameDisplay").innerText = name;
+        document.getElementById("mblDisplay").innerText = mobile;
+        document.getElementById("genDis").innerText = gender;
+        
+    }
+
+    
+</script>
+
+<!-- whaever you are typing in input .. it is value ...default value is empty string -->

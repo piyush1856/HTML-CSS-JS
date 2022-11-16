@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <style>
+        /* all sibling slector  selector1~selector2~selector3 */
+        h1~p{
+            /* select app p's which are general sibling of h1 */
+            background-color: red;
+        }
+        h4~p{
+            background-color: yellow;
+        }
+        p~h3{
+            background-color: teal;
+        }
+        p~h6{
+            background-color: orange;
+        }
+        p~p{
+            background-color: aqua;
+        }
+        h1~p~p{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>h1</h1>
+        <p>p1</p>
+        <p>p2</p>
+        <p>p3</p>
+        <h3>h3</h3>
+    </div>
+    
+    <div id="box">
+        <h4>h4</h4>
+        <p>p4</p>
+        <p>p5</p>
+        <p>p6</p>
+        <h6>h6</h6>
+    </div>
+</body>
+</html>

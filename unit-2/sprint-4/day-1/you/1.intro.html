@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Local Storage</h1>
+    <p></p>
+</body>
+</html>
+
+<script>
+    // setItem("keyName","Value")
+    localStorage.setItem("Student1","Vivek");
+    localStorage.setItem("Student2","Lokendra");
+    localStorage.setItem("Student3","Tanuj");
+    localStorage.setItem("Student2","Rahul");
+    // value will get updated due to same key name.
+    // inspect  -->  Application  -->  local storage
+
+    localStorage.setItem("Student1-mobile",154697423);
+    localStorage.setItem("Student2-mobile","154585423");
+
+    // getItem("keyName")
+    let name = localStorage.getItem("Student2")
+    document.querySelector("p").innerText = name;
+    // to show in browser
+
+    // whenever you are trying to access a key which is not present in storage it give .. null
+    // eg - let name = localStorage.getItem("erwerewrwrwatheqttSADDFD")
+</script>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main{
+        /* border: 1px solid; */
+        width: 12cm;
+        height: 20cm;
+        margin: auto;
+    }
+    #result{
+        /* border: 1px solid; */
+        width: 12cm;
+        height: 2cm;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    #result>div{
+        border: 3px solid;
+        width: 3.5cm;
+        height: 2cm;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 36px;
+        font-weight: bold;
+    }
+    #resultLabel{
+        /* border: 1px solid; */
+        width: 10cm;
+        height: 1cm;
+        display: flex;
+        margin: auto;
+        margin-top: 2px;
+        justify-content: space-between;
+    }
+    #resultLabel>div{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    #display{
+        width: 8cm;
+        height: 2.5cm;
+        margin: auto;
+        border: 3px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 55px;
+        font-weight: bold;
+        background-color: rgb(166, 162, 162);
+        overflow: hidden;
+    }
+    #key{
+        width: 8cm;
+        height: 8.5cm;
+        margin: auto;
+        margin-top: 0.5cm;
+        /* border: 1px solid; */
+        display: grid;
+        grid-template-columns: repeat(3,2cm);
+        grid-template-rows: repeat(4,2cm);   
+        gap: 20px;
+        justify-content: center;
+        grid-template-areas:
+        "a b c"
+        "d e f"
+        "g h i"
+        ". j ."; 
+    }
+    button{
+        width: 8cm;
+        height: 2cm;
+        display: flex;
+        margin: auto;
+        margin-top: 1.5cm;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+    } 
+    #key>div{
+        border: 3px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    #key>div:nth-child(1){
+        grid-area: a;
+        background-color: rgb(116, 151, 63);
+    }
+    #key>div:nth-child(2){
+        grid-area: b;
+        background-color: rgb(255, 175, 26);
+    }
+    #key>div:nth-child(3){
+        grid-area: c;
+        background-color: rgb(116, 151, 63);
+    }
+    #key>div:nth-child(4){
+        grid-area: d;
+        background-color: rgb(255, 175, 26);
+    }
+    #key>div:nth-child(5){
+        grid-area: e;
+        background-color: rgb(255, 175, 26);
+    }
+    #key>div:nth-child(6){
+        grid-area: f;
+        background-color: rgb(255, 175, 26);
+    }
+    #key>div:nth-child(7){
+        grid-area: g;
+        background-color: rgb(116, 151, 63);
+    }
+    #key>div:nth-child(8){
+        grid-area: h;
+        background-color: rgb(255, 175, 26);
+    }
+    #key>div:nth-child(9){
+        grid-area: i;
+        background-color: rgb(116, 151, 63);
+    }
+    #key>div:nth-child(10){
+        grid-area: j;
+        background-color: rgb(161, 36, 161);
+        color: white;
+        border: 3px solid black;
+    }
+</style>
+<body>
+    <div id="main">
+        
+        
+        <div id="result">
+            <div style="background-color: orangered;" id="min">43</div>
+            <div style="background-color: rgb(46, 181, 46);" id="max">2019</div>
+        </div>
+
+        <div id="resultLabel">
+            <div>MIN</div>
+            <div>MAX</div>
+        </div>
+
+        <h1 style="text-align: center;margin-top: -0.25cm;">SCORE</h1>
+
+        <div id="display">#</div>
+
+        <div id="key">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>0</div>
+            <button>ENTER</button>
+        </div>
+
+        
+
+
+    </div>
+</body>
+</html>
+<script>
+    let key = document.querySelectorAll("#key>div");
+    let bag = "";
+    for(let i=0;i<key.length;i++){
+        key[i].addEventListener("click",input);
+    }
+    function input(){
+        let target = event.target.innerText;
+        bag=bag+target;
+        let x =document.querySelector("#display");
+        x.innerText = bag;
+        
+    }
+    
+    let enter = document.querySelector("button")
+    enter.addEventListener("click",enterBtn);
+    // let min = document.querySelector("#min").innerText;
+    // let max = document.querySelector("#max").innerText;
+    
+    function enterBtn(){
+        let temp = bag;
+        if(temp<document.querySelector("#min").innerText){
+            document.querySelector("#min").innerText = temp;
+        }else if(temp>document.querySelector("#max").innerText){
+            document.querySelector("#max").innerText=temp;
+        }
+    }
+</script>

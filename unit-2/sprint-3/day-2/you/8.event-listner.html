@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="myFunction()">Click Me</button> -->
+    <button>Click Me</button>
+    <h1>masaiS</h1>
+
+</body>
+</html>
+
+<script>
+    // whenever you add am event to any element, an additional event
+    // object will be formed which has some additional properties of event
+    
+    // where can you access the event object? --> inside function parameter
+
+    document.querySelector("button").addEventListener("click",myFunction)
+    document.querySelector("h1").addEventListener("click",masai)
+
+    function myFunction(event){
+        console.log(event.target.innerText)
+        // target is button, smthng which is trigeered after click(event)
+    }
+    function masai(event){
+        console.log(event.target)
+        // targrt is h1, smthng which is trigeered after click(event)
+    }
+
+
+</script>

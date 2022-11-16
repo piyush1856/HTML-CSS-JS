@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <button>Increment</button>
+    <button>Decrement</button>
+
+</body>
+</html>
+
+<script>
+    // let counter =0;
+    // to get the stored value after refresh the page
+    // parse is used when we are getting in form of obj/arr
+    // let counter = localStorage.getItem("localCounter");
+    
+    // if(localStorage.getItem("localCounter") == null){
+    //     counter = 0;
+    // }else{
+    //    counter = localStorage.getItem("localCounter")
+    // }
+
+    let counter = localStorage.getItem("localCounter") || 0
+
+    document.querySelector("h1").innerText = counter;
+
+
+    document.querySelector("h1+button").addEventListener("click", incFunc);
+    document.querySelector("button+button").addEventListener("click", decFunc);
+
+    function incFunc(){
+        counter++;
+        document.querySelector("h1").innerText = counter;
+        localStorage.setItem("localCounter", counter);
+    }
+
+    function decFunc(){
+        counter--;
+        document.querySelector("h1").innerText = counter;
+        localStorage.setItem("localCounter", counter);
+
+
+    }
+
+    // how to store the value in local storage ?.. because after refreshing the page counter 
+    // is again starting from zero.
+    // store(set item) inside the function .. outside the function value will always be zero
+    //  inside function it will store every time the function is invoked(click)
+    // but the value will updated due to object property
+    // order of execution - line 34 for increment -> function incFunc -> counter ++ -> h1 updatation -> storing;
+    // next thing is written in line 19/20
+
+    // after line21
+    // their is a bug in application - 
+    // if local storage is cleared .. the value will be null(it also means  0 in javascript)
+    // so if/else condition is introduced - line23
+    // instead of if/else condition -- one line of code can also be written..
+    // like line29
+    // with the help of boolean
+</script>

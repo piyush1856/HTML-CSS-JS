@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width: 80%;
+        
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,200px);
+        gap: 20px;
+        padding: 20px;
+        margin: auto;
+        
+    }
+
+    .box>div{
+        /* don,t give height and width for child - given in parent (row and coloumn) */
+        box-shadow: rgba(228, 182, 122, 0.25) 0px 54px 55px, rgba(228, 182, 122, 0.25) 0px -12px 30px, rgba(228, 182, 122, 0.25) 0px 4px 6px, rgba(228, 182, 122, 0.25) 0px 12px 13px, rgba(228, 182, 122, 0.25) 0px -3px 5px;
+        border-radius: 10px;
+        background-color: white;
+        
+        
+        
+    }
+    .box > div >div{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        margin-bottom: -20px;
+        
+    }
+    .box > div >div > h2:last-child{
+        color: rgb(180, 133, 71);
+    }
+    .box > div >p{
+        color: rgb(134, 126, 126);
+        padding: 20px;
+        font-size: 18px;
+        line-height: 25px;
+        
+    }
+
+</style>
+<body>
+    <div class="box">
+        <div>
+            <div>
+                <h2>Cappuccino</h2>
+                <h2>$49</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit rghjy juiuh.</p>
+        </div>
+        <div>
+            <div>
+                <h2>Cappuccino</h2>
+                <h2>$49</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit rghjy juiuh.</p>
+        </div>
+        <div>
+            <div>
+                <h2>Cappuccino</h2>
+                <h2>$49</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit rghjy juiuh.</p>
+        </div>
+        <div>
+            <div>
+                <h2>Cappuccino</h2>
+                <h2>$49</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit rghjy juiuh.</p>
+        </div>
+        <div>
+            <div>
+                <h2>Cappuccino</h2>
+                <h2>$49</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit rghjy juiuh.</p>
+        </div>
+        <div>
+            <div>
+                <h2>Cappuccino</h2>
+                <h2>$49</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit rghjy juiuh.</p>
+        </div>
+        <div>
+            <div>
+                <h2>Cappuccino</h2>
+                <h2>$49</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit rghjy juiuh.</p>
+        </div>
+        <div>
+            <div>
+                <h2>Cappuccino</h2>
+                <h2>$49</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit rghjy juiuh.</p>
+        </div>
+        <div>
+            <div>
+                <h2>Cappuccino</h2>
+                <h2>$49</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit rghjy juiuh.</p>
+        </div>
+    </div>
+</body>
+</html>
